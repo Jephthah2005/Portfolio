@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PORTFOLIO</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+html {
+    scroll-behavior: smooth;
+}
+        body {
+            font-family: Sans-Serif , Arial, roboto;
+            display: flex;
+            flex-direction: column;
+            background: #1a1b2b;
+            min-height: 100vh;
+        }
+@font-face {
+            font-family: owner;
+            src: url('james stroker.ttf');
+        }
+        .header {
+            
+            height: 350px;
+            width: 100%;
+            background-image: url('owner.jpg');
+            color: crimson;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+            font-weight: lighter;
+            font-family: owner;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+@media(min-width:500px) {
+  .header {
+    background-attachment: fixed;
+        -webkit-background-size: cover;
+        background-size: cover;
+        height: 500px;
+  }
+  body {
+    font-size: 1rem;
+  }
+  input {
+    width: 50%;
+  }
+}
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex: 1 0 auto;
+
+        }
+
+        .header-info {
+            top: 0;
+            position: -webkit-sticky;
+            position: sticky;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,100);
+            z-index: 5000;
+        }
+
+
+        .name {
+            font-weight: lighter;
+            font-size: 50px;
+            color: gold;
+            font-family: owner;
+            position: absolute;
+        }
+        .nav-btn {
+            width: 10px;
+            display: inline;
+            margin-left: -320px;
+            color: gold;
+            font-weight: lighter;
+            font-size: 45px;
+            position: absolute;
+        }
+
+@media (min-width:400px) {
+            .nav-btn {
+                display: none;
+            }
+            .header-info {
+                height: 150px;
+            }
+        }
+@media (max-width:450px) {
+            .inline-nav {
+                display: none;
+            }
+        }
+        ul {
+            margin-top: 90px;
+            display: flex;
+            gap: 70px;
+        }
+        li {
+            list-style-type: none;
+            color: crimson;
+        }
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            color: crimson;
+        }
+        a:active {
+            text-decoration: 2px solid gold;
+            color: gold;
+        }
+        .ui-ux {
+            margin-top: 50px;
+            height: 350px;
+            width: 350px;
+            box-shadow: .5px .5px 5px 5px rgba(0,0,0,.15);
+            background-image: url('ux.jpg');
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+            transition: 1s;
+        }
+        .ui-ux:hover {
+            height: 320px;
+            width: 320px;
+        }
+        .side-nav-menu {
+            margin-left: -900px;
+            transition: 1s;
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, #000431 60%, rgba(0,0,0,.80) 30%);
+            position: fixed;
+            top: 0;
+            z-index: 7000;
+        }
+@media (min-width:450px) {
+            .side-nav-menu {
+                display: none;
+            }
+        }
+        .ui-desc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            box-shadow: 0 .5px 5px 5px rgba(0,0,0,.15);
+            height: 100px;
+            width: 350px;
+            font-size: 25px;
+            background: deepskyblue;
+        }
+        .owner-i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 150px;
+            border-radius: 78% 22% 32% 68% / 66% 64% 36% 34%;
+            background: crimson;
+        }
+        .oi {
+            height: 80px;
+            border: 2px solid #fff;
+            width: 80px;
+            border-radius: 80px;
+        }
+        .oin {
+            font-weight: lighter;
+            font-family: owner;
+            color: crimson;
+            font-size: 20pt;
+            margin-left: 20px;
+
+        }
+        .social-media {
+            height: 50px;
+            width: 200px;
+            border: 2px solid crimson;
+        }
+        .nav-content {
+            height: 300px;
+            width: 200px;
+            margin-top: 250px;
+            position: absolute;
+            margin-left: 50px;
+        }
+        .sn {
+            margin-top: 50px;
+        }
+        .li {
+            list-style-type: circle;
+        }
+        .a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 13pt;
+
+        }
+        .cancel-menu {
+            font-size: 30px;
+            color: gold;
+            position: fixed;
+            margin-left: 300px;
+        }
+
+        #about , #resume , #services, .gift , #contact, #contactss {
+            font-weight: lighter;
+            font-size: 13px;
+            box-shadow: 0 .3px 3px 3px #000431;
+            margin-top: 50px;
+            width: 92%;
+            color: #DAFFB4;
+            background: #1a1b2b;
+        }
+        .gap {
+            height: 50px;
+            margin-left: 100px;
+        }
+        h3 {
+            margin-top: 10px;
+            color: #29FF00;
+        }
+
+        .body {
+            font-size: 15pt;
+            margin-top: 9px;
+        }
+        .about , .resume , .services, .completed, .contact {
+            color: deepskyblue;
+            text-align: center;
+        }
+        .toggler {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 90px;
+            background: #fff;
+            transition: 1s;
+            background: #fff;
+            border-radius: 30px;
+            margin-left: 120px;
+        }
+        li {
+            list-style-type: circle;
+        }
+        a {
+            color: #fff;
+        }
+        meter {
+            height: 20px;
+            width: 90%;
+        }
+        p.r {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .service-rendered {
+            text-decoration: underline;
+            font-size: 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .completed {
+            margin-top: 50px;
+        }
+    </style>
+    <style>
+        body {
+            background: #000;
+        }
+        .timer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 50px;
+        }
+        form {
+            text-align: center;
+        }
+        .form {
+            margin-top: 90px;
+
+        }
+        input {
+            transition: 2s;
+            font-size:
+            15pt;
+            outline: 3px solid deepskyblue;
+            height: 50px;
+            width: 90%;
+            color: deepskyblue;
+            border: 3px solid #fff;
+            background: #000;
+        }
+        @media(min-width:450px) {
+          input {
+            width: 300px;
+          }
+          button {
+            width: 300px;
+          }
+        
+        
+        }
+        label {
+            position: absolute;
+            left: 0;
+            margin-top: -30px;
+            font-size: 15pt;
+            margin-left: 25px;
+        }
+@media(min-width:450px) {
+            label {
+                margin-left: 45px;
+                margin-top: -45px;
+            }
+        }
+        @media(min-width:650px) {
+          label{
+            margin-left: 500px;
+          }
+        }
+        textarea {
+            background: #000;
+            border: 3px solid #fff;
+            outline: 3px solid deepskyblue;
+            color: deepskyblue;
+            text-indent: 20px;
+        }
+        button {
+            height: 50px;
+            width: 90%;
+            border: none;
+            font-size: 20pt;
+            background: deepskyblue;
+            color: #fff;
+            border-radius: 50px;
+
+        }
+        @media(min-width:500px) {
+          button {
+            width: 50%;
+          }
+        }
+        .hire {
+            border-top-right-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20pt;
+            font-weight: bold;
+            height: 50px;
+            width: 200px;
+            background: deepskyblue;
+            color: #fff;
+        }
+        .btn {
+            margin-top: 30px;
+        }
+    </style>
+    <style>
+        * {
+            transition: 2s;
+        }
+        .container {
+            display: none;
+        }
+        .preloader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            background: #000;
+        }
+
+        .social-media {
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .social {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
+            height: 50px;
+            border: 2px solid crimson;
+        }
+        .prelader {
+            display: none;
+        }
+        .lightbox {
+            margin-left: 150%;
+            z-index: 500000;
+             background:rgba(0,0,0,.70) ;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .light{
+        height: 50%;
+        width: 100%;
+        }
+        .cancel-lightbox {
+            margin-left: 70%;
+            margin-top: -500px;
+            z-index: 600000;
+            position: absolute;
+            font-size: 80px;
+            color: #fff;
+        }
+        .preloader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .preloader h1 {
+            background: linear-gradient(45deg, #0f0, aqua, dodgerblue);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            color: #fff;
+            animation: h1 3s ease-in-out infinite;
+        }
+        @keyframes h1 {
+            to {
+                filter: hue-rotate(1turn);
+            }
+        }
+        .preloader .circle {
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            border-right: 3px solid #0f0;
+            border-left: 3px solid #0f0;
+            margin-top: -90px;
+            animation: circle 3s linear infinite;
+        }
+    @keyframes circle {
+        100% {
+            transform: rotate(360deg);
+            filter: hue-rotate(1turn);
+        }
+    }
+                .preloader .circle  .box{
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            border-right: 3px solid #0f0;
+            border-left: 3px solid #0f0;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="preloader">
+        <div class="circle">
+            <div class="box"></div>
+        </div>
+        <div class="circle">
+            <div class="box"></div>
+        </div>
+        <div class="circle">
+            <div class="box"></div>
+        </div>
+        <div class="circle">
+            <div class="box"></div>
+        </div>
+        <div class="circle">
+            <div class="box"></div>
+        </div>
+        
+        <h1>
+            Loading....
+        </h1>
+    </div>
+    <div class="container">
+        <div class="lightbox">
+            <div class="cancel-lightbox">&times;</div>
+            <img src="ux.jpg" alt="DEVELOPER lightbox image" class="light">
+            
+        </div>
+        <div class="header">
+            <h2>HI! </h2>
+            <br>
+            <h1>I'M AKINTOLA JEPHTHAH</h1>
+        </div>
+
+
+
+        <div class="main">
+
+
+            <div class="header-info">
+
+                <h1 class="nav-btn">
+                    &#9776;
+                </h1>
+
+                <h1 class="name">JEPHTHAH</h1>
+
+                <div class="inline-nav">
+
+                    <ul>
+
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#resume">RESUME</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="side-nav-menu">
+                <div class="owner-i">
+                    <img src="owner.jpg" alt="owner" class="oi">
+                </div>
+                <div class="oin">
+                    Akintola Jephthah
+                </div>
+                <div class="cancel-menu">
+                    <h1>
+                        &times;
+                    </h1>
+                </div>
+                <div class="social-media">
+
+                    <a href="https://www.facebook.com/jenboi.akintola" class="s">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dodgerblue" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+
+                    <a href="https://wa.me//09039320695" class="s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0f0" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                    </a>
+                    <a href="https://telegram.org/dl" class="s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="deepskyblue" class="bi bi-telegram" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+                    <a href="Mailto:jephthahjew@gmail.com" class="s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="nav-content">
+                    <ul class="sn">
+                        <li class="li"><a href="#home" class="a">HOME</a></li>
+                    </ul>
+                    <ul class="sn">
+                        <li class="li"><a href="#about" class="a">ABOUT</a></li>
+                    </ul>
+                    <ul class="sn">
+                        <li class="li"><a href="#resume" class="a">RESUME</a></li>
+                    </ul>
+                    <ul class="sn">
+                        <li class="li"><a href="" class="a">SERVICES</a></li>
+                    </ul>
+                    <ul class="sn">
+                        <li class="li"><a href="" class="a">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="home">
+                <div class="ui-ux">
+                </div>
+                <div class="ui-desc">
+                    AKINTOLA JEPHTHAH
+                    <P>
+                        DEVELOPER, UI AND UX DESIGNER
+                    </P>
+                </div>
+            </div>
+            <div id="about">
+                <h1 class="about">ABOUT ME</h1>
+                <h3>
+                    INTRODUCTION:
+                </h3>
+
+                <p class="body">
+                    Hi, I'm Akintola Jephthah, a passionate programmer with a knack for problem-solving and innovation.
+                </p>
+                <h3>
+                    SKILLS:
+                </h3>
+
+                <p class="body">
+                    Proficient in Python, Java, and JavaScript with experience in web development frameworks like Django and React. Skilled in database management using SQL and NoSQL technologies.
+
+                </p>
+
+                <h3>
+                    EXPERIENCE:
+                </h3>
+                <p class="body">
+                    Worked as a fullstack  developer at XYZ Company, where I developed robust APIs and optimized database queries, resulting in a 30% improvement in application performance.
+                </p>
+
+                <h3>
+                    PASSION AND INTEREST:
+                </h3>
+                <p class="body">
+                    I'm passionate about exploring the intersection of technology and social impact, and I volunteer my programming skills to develop tools for non-profit organizations.
+
+                </p>
+
+                <h3>
+                    FUTURE GOAL
+                </h3>
+
+                <p class="body">
+                    I aim to deepen my expertise in cloud computing and pursue AWS certification to enhance my skills in scalable and resilient application development.
+                </p>
+
+                <h3>
+                    CONCLUSION:
+                </h3>
+                <p class="body">
+                    I'm a dedicated developer with a passion for crafting high-quality software solutions. Armed with expertise in multiple programming languages such as Python, JavaScript, and Java, I thrive on tackling complex challenges and turning them into elegant, efficient code. Whether it's developing web applications, mobile apps, or backend systems, I approach each project with meticulous attention to detail and a commitment to writing clean, maintainable code. I love collaborating with cross-functional teams to bring innovative ideas to life and continuously seek opportunities to enhance my skills and stay up-to-date with the latest technologies.
+
+
+                </p>
+            </div>
+
+
+
+            <div id="resume">
+                <h1 class="resume">RESUME</h1>
+
+                <h3>HTML</h3>
+
+                <p>
+                    <meter value="100" min="0" max="100"></meter>
+                </p>
+                <p class="r">
+                    100%
+                </p>
+
+                <h3>CSS</h3>
+
+                <p>
+                    <meter value="95" min="0" max="100"></meter>
+                </p>
+                <p class="r">
+                    95%
+                </p>
+
+
+                <h3>JAVASCRIPT</h3>
+
+                <p>
+                    <meter value="85" min="0" max="100"></meter>
+                </p>
+                <p class="r">
+                    85%
+                </p>
+
+                <h3>PHP</h3>
+
+                <p>
+                    <meter value="70" min="0" max="100"></meter>
+                </p>
+                <p class="r">
+                    70%
+                </p>
+
+                <h3>REACT</h3>
+
+                <p>
+                    <meter value="70" min="0" max="100"></meter>
+                </p>
+                <p class="r">
+                    70%
+                </p>
+
+
+                <h3>ANGULAR</h3>
+
+                <p>
+                    <meter value="80" min="0" max="100"></meter>
+
+                </p>
+                <p class="r">
+                    80%
+                </p>
+
+
+                <h3>PYTHON</h3>
+
+                <p>
+                    <meter value="95" min="0" max="100"></meter>
+
+                </p>
+                <p class="r">
+                    95%
+                </p>
+
+                <h3>mySQL</h3>
+
+                <p>
+                    <meter value="100" min="0" max="100"></meter>
+                </p>
+                <p class="r">
+                    100%
+                </p>
+            </div>
+
+            <div id="services">
+                <h1 class="services">
+                    SERVICES
+                </h1>
+
+                <h3 class="service-rendered">
+                    MARKETER
+                </h3>
+                <p class="body">
+                    I'm a results-driven marketer with a passion for crafting engaging brand experiences. Drawing upon my expertise in market research and consumer psychology, I excel at developing data-driven strategies that connect with audiences on a deeper level. From conceptualizing creative campaigns to executing multi-channel marketing initiatives, I leverage my strong analytical skills to drive measurable outcomes and achieve business objectives. With a keen eye for detail and a knack for storytelling, I bring brands to life in the digital space, fostering meaningful connections and driving customer engagement. My collaborative nature and proactive mindset make me a valuable asset in any marketing team, where I thrive on tackling challenges and driving
+                </p>
+
+                <h3 class="service-rendered">DEVELOPER</h3>
+
+                <p class="body">
+                    I'm a dedicated developer with a passion for crafting high-quality software solutions. Armed with expertise in multiple programming languages such as Python, JavaScript, and Java, I thrive on tackling complex challenges and turning them into elegant, efficient code. Whether it's developing web applications, mobile apps, or backend systems, I approach each project with meticulous attention to detail and a commitment to writing clean, maintainable code. I love collaborating with cross-functional teams to bring innovative ideas to life and continuously seek opportunities to enhance my skills and stay up-to-date with the latest technologies."
+                </p>
+            </div>
+
+            <div class="gift">
+                <h1 class="completed">COMPLETED PROJECTS</h1>
+                <h2 class="timer pro">
+                    4500
+                </h2>
+
+                <h1 class="completed">HOURS OF SUPPORT</h1>
+                <h2 class="timer hour">
+                    3865
+                </h2>
+                <h1 class="completed">AWARD</h1>
+                <h2 class="timer award">
+                    300
+                </h2>
+
+                <h1 class="completed">WORKERS</h1>
+                <h2 class="timer workers">
+                    50
+                </h2>
+
+                <h1 class="completed">CUP OF COFFES</h1>
+                <h2 class="timer coffes">
+                    50
+                </h2>
+            </div>
+            <div id="contact">
+                <h1 class="contact">
+                    CONTACT ME
+                </h1>
+                <h3>
+                    EMAIL:
+                </h3>
+                <p class="body">
+                    jephthahjew@gmail.com
+                </p>
+                <h3>
+                    LOCATION:
+                </h3>
+                <p class="body">
+                    Block 10, plot 16, Camp David Road, Ishefun Ayobo Lagos Nigeria
+                </p>
+                <h3>
+                    CALL
+                </h3>
+                <p class="body">
+                    +234 90-3932-0695
+                </p>
+
+                <h3 class="social">
+                    .
+                    <a href="https://www.facebook.com/jenboi.akintola" class="s">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dodgerblue" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg>
+                    </a>
+
+                    <a href="https://wa.me//09039320695" class="s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0f0" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                    </a>
+                    <a href="https://telegram.org/dl" class="s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="deepskyblue" class="bi bi-telegram" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                        </svg>
+                    </a>
+
+                    <a href="Mailto:jephthahjew@gmail.com" class="s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                        </svg>
+                    </a>
+                </h3>
+            </div>
+            <div id="contactss">
+                <form action="https://httpbin.org" autocomplete="on" method="post">
+                    <div class="form hire">
+                        HIRE ME
+                    </div>
+                    <div class="form">
+                        <input type="text" required><label>YOUR NAME</label>
+                    </div>
+                    <div class="form">
+                        <input type="email" required><label>YOUR EMAIL</label>
+                    </div>
+                    <div class="form">
+                        <input type="text" required=""><label>SUBJECT</label>
+                    </div>
+                    <div class="form">
+                        <textarea cols="40" rows="20" required></textarea><label>YOUR MESSAGE</label>
+                    </div>
+                    <div class="form btn">
+                        <button>
+                            SUBMIT
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="gap"></div>
+        </div>
+
+    </div>
+
+    <script>
+
+        // preloader code starts here
+
+        setTimeout(() => {
+            document.querySelector('.preloader').style.opacity = "0";
+        }, 7000);
+        setTimeout(() => {
+            document.querySelector('.preloader').style.display = 'none';
+        }, 9000)
+
+        setTimeout(() => {
+            document.querySelector('.container').style.display = 'block';
+        },11000)
+
+        // preloader code ends here
+
+        // side menu code starts here
+
+        document.querySelector('.cancel-menu').onclick = () => {
+            document.querySelector('.side-nav-menu').style.marginLeft = '-900px';
+            document.querySelector('.side-nav-menu').style.opacity = '10';
+        }
+        document.querySelector('.nav-btn').onclick = () => {
+            document.querySelector('.side-nav-menu').style.marginLeft = '0px';
+        }
+
+        // side menu code ends here
+
+
+        //interval project starts where
+
+
+        let pro = document.querySelector('.pro');
+        let p = 0;
+        let proInterval = setInterval(function() {
+            p += 1;
+            pro.innerHTML = p;
+            clearInt()
+        }, 0)
+        function clearInt() {
+            if (pro.innerHTML == 4500) {
+                clearInterval(proInterval)
+            }
+        }
+
+
+
+        let hour = document.querySelector('.hour');
+        let h = 0;
+        let hourInterval = setInterval(function() {
+            h += 1;
+            hour.innerHTML = h;
+            clearIntH()
+        }, 0)
+        function clearIntH() {
+            if (hour.innerHTML == 3865) {
+                clearInterval(hourInterval)
+            }
+        }
+
+
+        let award = document.querySelector('.award');
+        let a = 0;
+        let awardInterval = setInterval(function() {
+            a += 1;
+            award.innerHTML = a;
+            clearIntA()
+        }, 100)
+        function clearIntA() {
+            if (award.innerHTML == 300) {
+                clearInterval(awardInterval)
+            }
+        }
+
+
+        let workers = document.querySelector('.workers');
+        let w = 0;
+        let workersInterval = setInterval(function() {
+            w += 1;
+            workers.innerHTML = w;
+            clearIntW()
+        }, 100)
+        function clearIntW() {
+            if (workers.innerHTML == 50) {
+                clearInterval(workersInterval)
+            }
+        }
+
+
+        let coffe = document.querySelector('.coffes');
+        let c = 0;
+        let coffeInterval = setInterval(function() {
+            c += 1;
+            coffe.innerHTML = c;
+            clearIntC()
+        }, 100)
+        function clearIntC() {
+            if (coffe.innerHTML == 50) {
+                clearInterval(coffeInterval)
+            }
+        }
+
+        //interval project ends here
+        
+        //lightbox code starts here 
+        let cancelL = document.querySelector('.cancel-lightbox');
+        cancelL.onclick = function() {
+            document.querySelector('.lightbox').style.marginTop = '-150%'
+        }
+        let dd = document.querySelector('.ui-ux');
+        dd.onclick = function() {
+            document.querySelector('.lightbox').style.marginTop = '0px';
+        }
+        // lightbox code ends here
+    </script>
+
+</body>
+</html>
